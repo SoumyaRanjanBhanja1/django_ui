@@ -19,7 +19,7 @@ export default function Signup() {
     password: "",
   });
 
-  const API='https://django-server-6.onrender.com';
+  const API='https://django-server-7.onrender.com';
 
   const [error, setError] = useState({});
   const toast = useToast();

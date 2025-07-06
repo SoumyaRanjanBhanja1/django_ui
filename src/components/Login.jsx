@@ -16,7 +16,7 @@ export default function Login() {
     password: "",
   });
   
-  const API='https://django-server-6.onrender.com';
+  const API='https://django-server-7.onrender.com';
 
   const navigate = useNavigate();
   const toast = useToast();
