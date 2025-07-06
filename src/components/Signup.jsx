@@ -36,11 +36,11 @@ export default function Signup() {
   e.preventDefault();
   try {
     await axios.post(`${API}/api/register/`, formData, {
-      withCredentials: true,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
     toast({
       title: "Registered Successfully",
       status: "success",
