@@ -35,7 +35,12 @@ export default function Signup() {
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post(`${API}/api/register/`, formData);
+    await axios.post(`${API}/api/register/`, formData, {
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     toast({
       title: "Registered Successfully",
       status: "success",
