@@ -18,6 +18,9 @@ export default function Signup() {
     email: "",
     password: "",
   });
+
+  const API='https://django-server-6.onrender.com';
+
   const [error, setError] = useState({});
   const toast = useToast();
   const navigate = useNavigate();
@@ -32,7 +35,7 @@ export default function Signup() {
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post("http://localhost:8000/api/register/", formData);
+    await axios.post(`${API}/api/register/`, formData);
     toast({
       title: "Registered Successfully",
       status: "success",

@@ -15,6 +15,8 @@ export default function Login() {
     email: "",
     password: "",
   });
+  
+  const API='https://django-server-6.onrender.com';
 
   const navigate = useNavigate();
   const toast = useToast();
@@ -29,7 +31,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("http://localhost:8000/api/login/", formData);
+    const res = await axios.post(`${API}/api/login/`, formData);
     console.log("Login success", res.data);
     navigate("/");
   } catch (err) {
